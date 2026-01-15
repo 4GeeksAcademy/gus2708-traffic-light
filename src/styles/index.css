@@ -1,11 +1,73 @@
-/* 
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+:root {
+    --selected-color: red;
+}
 
-*/
+.trafficLightBase {
+    width: 3vw;
+    height: 6vw;
+    background-color: black;
+}
+
+.trafficLight {
+    width: 20vw;
+    height: max-content;
+    background-color: black;
+    border-radius: 2vw;
+    transform: translateY(-2px);
+}
+
+
+button:hover {
+    background-color: purple !important;
+    border-color: purple;
+    box-shadow: 0px 0px 20px 10px purple;
+}
+
+.light{
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    background-color: blueviolet;
+    border-radius: 100%;
+    margin-top: 10%;
+    z-index: 1;
+}
+
+.light:nth-last-child(1){
+    margin-bottom: 10%;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.purple {
+    background-color: purple;
+    color: white;
+    border-color: purple;
+}
+
+.selected {
+    box-shadow: 0px 0px 120px 30px var(--selected-color);
+    z-index: 0 !important;
+}
+
+
+@media (min-width: 768px) {
+    .trafficLightBase {
+        width: 2vw;
+        height: 4vw;
+    }
+
+    .trafficLight {
+        width: 10vw;
+    }
+}
